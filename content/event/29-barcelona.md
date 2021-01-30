@@ -13,7 +13,7 @@ abstract = ""
 abstract_short = ""
 
 # Name of event and optional event URL.
-event = "Talk at ECCB2020 Workshop Barcelona (online due to COVID19)"
+event = "Talk at ELIXIR 2020 Workshop on FAIR Workflows (online due to COVID19)"
 event_url = ""
 
 # Location of event.
