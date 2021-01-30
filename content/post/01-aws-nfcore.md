@@ -55,28 +55,30 @@ instances (you should use them to save money!).
 #### AWSBatchServiceRole
 
 This role should have the policy `AWSBatchServiceRole` attached.
-![](https://raw.githubusercontent.com/apeltzer/starter-academic/master/static/img/2018-08-21_awsnfcore//image7.png)
+![](https://raw.githubusercontent.com/apeltzer/starter-academic/master/static/img/2018-08-21_awsnfcore/image7.png)
+
+
 
 #### ecsInstanceRole
 
 This role should have the policies `AmazonS3FullAccess` and
 `AmazonEC2ContainerServiceforEC2Role` set.
 
-![](https://raw.githubusercontent.com/apeltzer/starter-academic/master/static/img/2018-08-21_awsnfcore//image1.png)
+![](https://raw.githubusercontent.com/apeltzer/starter-academic/master/static/img/2018-08-21_awsnfcore/image1.png)
 
 #### AWSServiceRoleForEC2SpotFleet
 
 This role should have the policy `AWSEC2SpotFleetServiceRolePolicy`
 set.
 
-![](https://raw.githubusercontent.com/apeltzer/starter-academic/master/static/img/2018-08-21_awsnfcore//image6.png)
+![](https://raw.githubusercontent.com/apeltzer/starter-academic/master/static/img/2018-08-21_awsnfcore/image6.png)
 
 #### AmazonEC2SpotFleetRole
 
 This role should have the policies `AmazonEC2SpotFleetRole` and
 `AmazonEC2SpotFleetTaggingRole` set accordingly.
 
-![](https://raw.githubusercontent.com/apeltzer/starter-academic/master/static/img/2018-08-21_awsnfcore//image8.png)
+![](https://raw.githubusercontent.com/apeltzer/starter-academic/master/static/img/2018-08-21_awsnfcore/image8.png)
 
 Once you have set these roles, the permissions for running a job with
 the selected IAM user can be used to configure a compute environment
@@ -160,7 +162,6 @@ Choose a name and a description and create the AMI.
 
 ## Set up QUEUE / Compute Environment 
 
-
 In order to submit jobs to AWS Batch, you need to have a working
 compute environment (CE) and a JobQueue set up. Start with the CE and
 then create a compute environment.
@@ -217,12 +218,11 @@ execution on AWSBatch.
 - workDir
 - Executor
 - Queue
-- Region 
+- Region
 - And a custom path to AWScli inside the customized AMI to schedule jobs
 
 This is then set to default values in the
 [nextflow.config](https://github.com/qbicsoftware/ICGC-featureCounts/blob/master/nextflow.config&sa=D&ust=1534850604088000) of the pipeline and set according to user specified parameters when executing the pipeline. This way, users don't need to change the `awsbatch.config` file but can instead rely on using a set of parameters `--workDir, --awsqueue, --awsregion` and should be fine.
-
 
 ## Running a basic job with AWS Batch
 
